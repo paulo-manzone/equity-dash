@@ -1,0 +1,27 @@
+<div class="row v-margin">
+    <div class="col-lg-5 offset-1">
+        <p-card header="Distribuição da carteira" >
+            <p-chart type="pie" [data]="data" [style]="{width: '100%', height: '260px'}"></p-chart>
+        </p-card>
+    </div>
+    <div class="col-lg-5 mi-content">
+        <p-card header="Ativos">
+            <p-scrollPanel [style]="{width: '100%', height: '260px'}">
+                <ul *ngFor="let acao of acoes" class="acoes">
+                    <li>
+                        <strong>Ação:</strong> {{acao.ticker}}    <strong>Valor:</strong> {{acao.valor}}
+                        <hr>
+                    </li>
+                </ul>
+            </p-scrollPanel>
+        </p-card>
+    </div>
+</div>
+
+<div class="row v-margin">
+    <div class="col-lg-10 offset-1">
+        <p-card header="Insights">
+            content
+        </p-card>
+    </div>
+</div>
