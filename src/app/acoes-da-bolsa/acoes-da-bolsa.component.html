@@ -1,1 +1,27 @@
-<p>acoes-da-bolsa works!</p>
+
+
+<div class="row">
+    <div class="col-lg-4 offset-1">
+        <p-orderList [value]="acoes" filterBy="ticker" filterPlaceHolder="Digite o ticker do ativo">
+            <ng-template let-acao pTemplate="item">
+                <div class="ui-helper-clearfix">
+                    <div style="font-size:30px; font-weight:bolder; float:left;">{{acao.ticker}}  </div>
+                    <div style="font-size:30px; float:right;">R${{acao.valor}}</div>
+                </div>
+            </ng-template>
+        </p-orderList>
+    </div>
+    <div class="col-lg-6" >
+        <p-chart type="line" [data]="data"></p-chart>
+    </div>
+</div>
+<div class="row">
+    <div class="col-lg-1 offset-1">
+        <button pButton type="button" label="Adicionar" icon="pi pi-plus"></button>
+    </div>
+    <div class="col-lg-9">
+        <p-card>
+            Quantidade de ações em carteira: 10
+        </p-card>
+    </div>
+</div>

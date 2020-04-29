@@ -1,8 +1,6 @@
-<p-card header="Equity-Dash" [style]="{color: 'white', background: '#44f'}">
-  by Paulo Maia
+<p-card header="Equity-Dash" [style]="{color: 'white', background: '#55f', height: '60px'}">
 </p-card>
-<hr>
-<p-tabMenu [model]="items" [activeItem]="activeItem">
+<p-tabMenu [model]="items" [activeItem]="activeItem" [style]="{marginTop: '10px'}">
   <ng-template pTemplate="item" let-item let-i="index">
       <div (click)="goTo(item)" style="position: relative; text-align: center; min-width: 10em">
           <div class="ui-menuitem-icon" [ngClass]="item.icon" *ngIf="item.icon" style="font-size: 2em"></div>

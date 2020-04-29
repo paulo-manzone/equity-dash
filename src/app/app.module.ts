@@ -15,6 +15,9 @@ import { ConfiguracoesComponent } from './configuracoes/configuracoes.component'
 import { ValuationComponent } from './valuation/valuation.component';
 import { ChartModule } from 'primeng/chart';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
+import {ButtonModule} from 'primeng/button';
+import {OrderListModule} from 'primeng/orderlist';
+
 
 @NgModule({
   declarations: [
@@ -32,7 +35,9 @@ import {ScrollPanelModule} from 'primeng/scrollpanel';
     TabMenuModule,
     CardModule,
     ChartModule,
-    ScrollPanelModule
+    ScrollPanelModule,
+    ButtonModule,
+    OrderListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

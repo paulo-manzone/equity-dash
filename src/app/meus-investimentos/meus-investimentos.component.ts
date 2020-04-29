@@ -18,6 +18,11 @@ export class MeusInvestimentosComponent implements OnInit {
     {ticker: "BBAS3", valor:"10.00"}
   ]
 
+  insights = [
+    {texto:"Banco do Brasil está abaixo de seu valor intrínseco"},
+    {texto:"Você possui uma baixa diversificação de ativos"}
+  ]
+
   constructor() {
     this.data = {
       labels: ['A','B','C'],
