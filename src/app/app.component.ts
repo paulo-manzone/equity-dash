@@ -20,29 +20,12 @@ export class AppComponent {
 
     ngOnInit() {
         this.items = [
-            {label: 'Meus Investimentos', icon: 'pi pi-fw pi-home'},
-            {label: 'Ações da Bolsa', icon: 'pi pi-fw pi-chart-line'},
-            {label: 'Valuation', icon: 'pi pi-fw pi-money-bill'},
-            {label: 'Configurações', icon: 'pi pi-fw pi-cog'}
+            {label: 'Meus Investimentos', icon: 'pi pi-fw pi-home', routerLink:'meus-investimentos'},
+            {label: 'Ações da Bolsa', icon: 'pi pi-fw pi-chart-line', routerLink:'acoes-da-bolsa'},
+            {label: 'Valuation', icon: 'pi pi-fw pi-money-bill', routerLink:'valuation'},
+            {label: 'Configurações', icon: 'pi pi-fw pi-cog', routerLink:'configuracoes'}
         ];
 
         this.activeItem = this.items[0];
-    }
-
-    goTo(item){
-      switch(item.label){
-        case "Meus Investimentos":
-          this._router.navigate(['/meus-investimentos']);
-          break;
-        case "Ações da Bolsa":
-          this._router.navigate(['/acoes-da-bolsa']);
-          break;
-        case "Valuation":
-          this._router.navigate(['/valuation']);
-          break;
-        case "Configurações":
-          this._router.navigate(['/configuracoes']);
-          break;
-      }
     }
 }

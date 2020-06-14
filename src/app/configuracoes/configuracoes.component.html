@@ -2,14 +2,15 @@
     <div class="col-lg-12">
         <p-card>
             <div class="row">
-                <div class="col-lg-4 m-2">
+                <div class="col-lg-8 m-2">
                     <label>Seu nome:</label>
-                    <input class="m-2" id="float-input" type="text" size="15" pInputText> 
+                    <input class="m-2" id="float-input" type="text" size="50" pInputText> 
                 </div>
-            
+            </div>
+            <div class="row">
                 <div class="col-lg-4">
                     <label>Linguagem:</label>
-                    <p-dropdown class="m-2" [options]="cars" [(ngModel)]="selectedCar1" editable="false" placeholder="Seleciona uma língua"></p-dropdown>
+                    <p-dropdown class="m-2" [options]="languages" [(ngModel)]="selectedLanguage" editable="false" placeholder="Seleciona uma língua"></p-dropdown>
                 </div>
             </div>
             <div class="row m-2">

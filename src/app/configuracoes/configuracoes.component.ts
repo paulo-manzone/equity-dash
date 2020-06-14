@@ -10,7 +10,7 @@ import { SelectItem } from 'primeng/api';
 export class ConfiguracoesComponent implements OnInit {
 
   constructor() {
-    this.cars = [
+    this.languages = [
       {label:"Português", value:"Portugues"},
       {label:"Inglês", value:"Portugues"}
     ]
@@ -19,9 +19,9 @@ export class ConfiguracoesComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  cars: SelectItem[];
+  languages: SelectItem[];
 
-  selectedCar1: string;
+  selectedLanguage: string;
 
   gravarConfig(){
     console.log("Gravado!");
