@@ -1,1 +1,94 @@
-<p>valuation works!</p>
+<div class="row m-3">
+
+    <div class="col-lg-1">
+        <p-card styleClass="bg-dark text-light">
+            Gordon
+        </p-card>
+    </div>
+
+    <div class="col-lg-9">
+        <p-card styleClass="bg-light">
+            <span class="ui-float-label m-3" style="display: inline">
+                <input id="float-input" type="number" size="15" pInputText [(ngModel)]="dividendo"> 
+                <label for="float-input">Dividendo</label>
+            </span>
+
+            <span class="ui-float-label m-3" style="display: inline">
+                <input id="float-input" type="number" size="15" pInputText [(ngModel)]="g"> 
+                <label for="float-input">G</label>
+            </span>
+            <span class="ui-float-label m-3" style="display: inline">
+                <input id="float-input" type="number" size="15" pInputText [(ngModel)]="k"> 
+                <label for="float-input">K</label>
+            </span>
+
+            <p-button label="Calcular" (onClick)="calcGordon()"></p-button>
+
+        </p-card>
+    </div>
+
+    <div class="col-lg-2">
+        <p-card styleClass="bg-primary text-white">
+            RESULTADO: {{dividendo}}
+        </p-card>
+    </div>
+
+</div>
+
+<div class="row m-3">
+
+    <div class="col-lg-1">
+        <p-card styleClass="bg-dark text-light">
+            Graham
+        </p-card>
+    </div>
+
+    <div class="col-lg-9">
+        <p-card styleClass="bg-light">
+            <span class="ui-float-label m-3" style="display: inline">
+                <input id="float-input" type="number" size="15" pInputText> 
+                <label for="float-input">LPA</label>
+            </span>
+
+            <span class="ui-float-label m-3" style="display: inline">
+                <input id="float-input" type="number" size="15" pInputText> 
+                <label for="float-input">VPA</label>
+            </span>
+
+            <p-button id="btn-calc" label="Calcular" (onClick)="calcGraham()"></p-button>
+                
+        </p-card>
+    </div>
+
+    <div class="col-lg-2">
+        <p-card styleClass="bg-primary text-white">
+            RESULTADO:
+        </p-card>
+    </div>
+
+</div>
+
+<div class="row m-3">
+    <div class="col-lg-12">
+        
+        <p-card header="Como usar?"  class="rounded" styleClass="bg-dark text-light m-3">
+            Para utilizar os métodos acima são necessárias algumas informações sobre as empresas e ações,
+            além de uma percepção própria sobre o futuro das mesmas.<br><br>
+
+            <b>Método de Gordon:</b><br>
+            Dividendo = Dividendo esperado por ação nos próximos 12 meses. Ex: R$ 2,50 por ação, logo deve ser escrito 2.50 no campo.<br>
+            G = Taxa de crescimento (na perpetuidade, ou seja, quanto que se espera
+            que ela cresca em média no longuíssimo prazo) Ex: Para 5% de crescimento deve ser escrito 0.05 no campo.<br>
+            K = Taxa que o investidor espera receber por investir nessa empresa por ano. 
+            Ex: Se o desejo de rentabilidade for de 10% ao ano, então a entrada deve ser 0.1 no campo.<br><br>
+
+            <b>Método de Graham:</b><br>
+            LPA = Lucro líquido da empresa por ação.<br>
+            VPA = Valor patrimonial líquido por ação<br><br>
+
+            <i>*Os métodos acima são teóricos, e não devem ser utilizados como recomendação de compra ou venda de ações</i>
+
+        </p-card>
+
+    </div>
+</div>

@@ -3,6 +3,7 @@ import { NgModule } from '@angular/core';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { FormsModule } from '@angular/forms';
 
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 
@@ -17,6 +18,8 @@ import { ChartModule } from 'primeng/chart';
 import {ScrollPanelModule} from 'primeng/scrollpanel';
 import {ButtonModule} from 'primeng/button';
 import {OrderListModule} from 'primeng/orderlist';
+import {InputTextModule} from 'primeng/inputtext';
+import { Dropdown, DropdownModule } from 'primeng/dropdown';
 
 
 @NgModule({
@@ -37,7 +40,10 @@ import {OrderListModule} from 'primeng/orderlist';
     ChartModule,
     ScrollPanelModule,
     ButtonModule,
-    OrderListModule
+    OrderListModule,
+    FormsModule,
+    InputTextModule,
+    DropdownModule
   ],
   providers: [],
   bootstrap: [AppComponent]

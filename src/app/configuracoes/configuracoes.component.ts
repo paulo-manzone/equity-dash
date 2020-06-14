@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { SelectItem } from 'primeng/api';
+
 
 @Component({
   selector: 'app-configuracoes',
@@ -7,9 +9,22 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ConfiguracoesComponent implements OnInit {
 
-  constructor() { }
+  constructor() {
+    this.cars = [
+      {label:"Português", value:"Portugues"},
+      {label:"Inglês", value:"Portugues"}
+    ]
+   }
 
   ngOnInit(): void {
+  }
+
+  cars: SelectItem[];
+
+  selectedCar1: string;
+
+  gravarConfig(){
+    console.log("Gravado!");
   }
 
 }
