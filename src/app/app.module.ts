@@ -20,6 +20,7 @@ import {ButtonModule} from 'primeng/button';
 import {OrderListModule} from 'primeng/orderlist';
 import {InputTextModule} from 'primeng/inputtext';
 import { Dropdown, DropdownModule } from 'primeng/dropdown';
+import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -43,7 +44,8 @@ import { Dropdown, DropdownModule } from 'primeng/dropdown';
     OrderListModule,
     FormsModule,
     InputTextModule,
-    DropdownModule
+    DropdownModule,
+    HttpClientModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,11 +1,16 @@
 <div class="row m-3">
 
+    <div class="col-lg-12">
+        <a href="https://statusinvest.com.br/acoes/" target="_blank">Pegue informações sobre ações aqui</a>
+    </div>
+
     <div class="col-lg-1">
         <p-card styleClass="bg-dark text-light">
             Gordon
         </p-card>
     </div>
 
+    
     <div class="col-lg-9">
         <p-card styleClass="bg-light">
             <span class="ui-float-label m-3" style="display: inline">
@@ -26,32 +31,32 @@
 
         </p-card>
     </div>
-
+    
     <div class="col-lg-2">
         <p-card styleClass="bg-primary text-white">
-            RESULTADO: {{dividendo}}
+            RESULTADO: {{gordonEdit}}
         </p-card>
     </div>
 
 </div>
 
 <div class="row m-3">
-
+   
     <div class="col-lg-1">
         <p-card styleClass="bg-dark text-light">
             Graham
         </p-card>
     </div>
-
+     
     <div class="col-lg-9">
         <p-card styleClass="bg-light">
             <span class="ui-float-label m-3" style="display: inline">
-                <input id="float-input" type="number" size="15" pInputText> 
+                <input id="float-input" type="number" size="15" pInputText [(ngModel)]="lpa"> 
                 <label for="float-input">LPA</label>
             </span>
 
             <span class="ui-float-label m-3" style="display: inline">
-                <input id="float-input" type="number" size="15" pInputText> 
+                <input id="float-input" type="number" size="15" pInputText [(ngModel)]="vpa">  
                 <label for="float-input">VPA</label>
             </span>
 
@@ -59,10 +64,10 @@
                 
         </p-card>
     </div>
-
+    
     <div class="col-lg-2">
         <p-card styleClass="bg-primary text-white">
-            RESULTADO:
+            RESULTADO: {{grahamEdit}}   
         </p-card>
     </div>
 
@@ -90,5 +95,5 @@
 
         </p-card>
 
-    </div>
+    </div> 
 </div>

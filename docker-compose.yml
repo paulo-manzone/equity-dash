@@ -1,0 +1,12 @@
+
+version: '3.4'
+
+services:
+  equitydash:
+    image: equity-dash-frontend
+    build: .
+    ports: 
+      - "8081:3000"
+
+   
+
