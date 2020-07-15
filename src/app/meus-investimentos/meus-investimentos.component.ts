@@ -1,4 +1,8 @@
 import { Component, OnInit } from '@angular/core';
+import { MeusInvestimentosService } from './meus-investimentos.service';
+import { Acao } from './acao';
+import { Observable } from 'rxjs';
+
 
 @Component({
   selector: 'app-meus-investimentos',
@@ -6,24 +10,28 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./meus-investimentos.component.scss']
 })
 export class MeusInvestimentosComponent implements OnInit {
+  
+  acaoEdit:any;
+  valorEdit:any;
+  quantidadeEdit:any;
 
   data:any;
-  acoes = [
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"},
-    {ticker: "BBAS3", valor:"10.00"}
-  ]
+  acoes$:Observable<Acao[]>
 
   insights = [
     {texto:"Banco do Brasil está abaixo de seu valor intrínseco"},
     {texto:"Você possui uma baixa diversificação de ativos"}
   ]
 
-  constructor() {
+  addClick(){
+    this.service.addAcao(this.acaoEdit, this.quantidadeEdit, this.valorEdit).subscribe(
+      success => console.log("Sucesso!"),
+      error => console.log(error),
+      () => console.log("finalizado")
+    );
+  }
+
+  constructor(private service:MeusInvestimentosService) {
     this.data = {
       labels: ['A','B','C'],
       datasets: [
@@ -45,6 +53,9 @@ export class MeusInvestimentosComponent implements OnInit {
   }
 
   ngOnInit(): void {
+    this.acoes$ = this.service.getAcoes();
   }
+
+  
 
 }

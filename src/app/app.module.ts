@@ -23,6 +23,7 @@ import { Dropdown, DropdownModule } from 'primeng/dropdown';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -46,6 +47,7 @@ import { HttpClient, HttpClientModule } from '@angular/common/http';
     InputTextModule,
     DropdownModule,
     HttpClientModule,
+    
   ],
   providers: [],
   bootstrap: [AppComponent]

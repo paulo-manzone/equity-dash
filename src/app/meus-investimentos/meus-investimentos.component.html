@@ -1,14 +1,24 @@
 
 <div class="row v-margin">
-    <div class="col-lg-5 offset-1">
+    <div class="col-lg-4 offset-1">
         <p-card header="Distribuição da carteira" >
             <p-chart type="pie" [data]="data" [style]="{width: '100%', height: '260px'}"></p-chart>
         </p-card>
     </div>
-    <div class="col-lg-5 mi-content">
-        <p-card header="Ativos">
+    <div class="col-lg-6 mi-content">
+        <p-card>
+            <div class="col-lg-12 offset-2 m-2">
+                <span> Ação: </span>
+                <input id="acaoEdit" type="text" size="6" pInputText [(ngModel)]="acaoEdit">
+                <span> Qtd: </span>
+                <input id="quantidadeEdit" type="number" size="5" pInputText [(ngModel)]="quantidadeEdit"> 
+                <span> Valor: R$ </span>
+                <input id="acaoEdit" type="number" size="10" pInputText [(ngModel)]="valorEdit"> 
+                <p-button label="Adicionar Ativo" (onClick)="addClick()" icon="pi pi-plus" iconPos="left" class="m-1"></p-button>
+
+            </div>
             <p-scrollPanel [style]="{width: '100%', height: '260px'}">
-                <ul *ngFor="let acao of acoes" class="acoes">
+                <ul *ngFor="let acao of acoes$ | async" class="acoes" >
                     <li>
                         <strong>Ação:</strong> {{acao.ticker}}    <strong>Valor:</strong> {{acao.valor}}
                         <hr>
